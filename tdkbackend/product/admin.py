@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Product,Category
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description', 'category','quantity','image_url','active')
+    list_display = ('name', 'description', 'category','quantity','image_url','active','price','discount')
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name', 'description', 'active','image_url')

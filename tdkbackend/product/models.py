@@ -15,6 +15,8 @@ class Product(models.Model):
     name = models.CharField(max_length=120)
     description = models.TextField()
     quantity = models.IntegerField()
+    price = models.IntegerField()
+    discount = models.IntegerField(default=0)
     category = models.ForeignKey(Category,on_delete=models.CASCADE,blank=True,null=True)
     image_url = models.FileField(upload_to='uploads/')
     active = models.BooleanField(default=False)
