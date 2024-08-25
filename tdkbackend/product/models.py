@@ -24,3 +24,12 @@ class Product(models.Model):
     def _str_(self):
         return self.name
     
+class Service(models.Model):
+    name = models.CharField(max_length=120,unique=True)
+    description = models.TextField()
+    image_url = models.FileField(upload_to='uploads/')
+    active = models.BooleanField(default=False)
+
+    def __str__(self):
+        return '%s' % (self.name)
+    

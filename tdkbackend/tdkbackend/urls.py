@@ -26,6 +26,7 @@ from django.views.static import serve
 router = routers.DefaultRouter()
 router.register(r'products', views.ProductView, 'product')
 router.register(r'categorys', views.CategoryView, 'category')
+router.register(r'services', views.ServiceView, 'service')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
