@@ -15,5 +15,5 @@ WORKDIR /tdkbackend
 EXPOSE 8080
 
 # runs the production server
-ENTRYPOINT ["python", "tdkbackend/manage.py"]
+ENTRYPOINT ["python", "manage.py"]
 CMD ["runserver", "0.0.0.0:8080"]
