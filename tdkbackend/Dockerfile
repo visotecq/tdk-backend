@@ -12,8 +12,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . tdkbackend
 WORKDIR /tdkbackend
 
-EXPOSE 8000
+EXPOSE 8080
 
 # runs the production server
-ENTRYPOINT ["python", "manage.py"]
-CMD ["runserver", "0.0.0.0:8000"]
+ENTRYPOINT ["python", "tdkbackend/manage.py"]
+CMD ["runserver", "0.0.0.0:8080"]
